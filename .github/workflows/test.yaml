@@ -9,5 +9,9 @@ jobs:
     steps:
       - name: Print Hello World
         run: echo "Hello, World!"
+      - name: Create index.html
+        run: echo "Hello World" > index.html
+      - name: Run Python HTTP Server
+        run: python -m http.server 8000 &
       - name: Print External IP
         run: curl ifconfig.me
