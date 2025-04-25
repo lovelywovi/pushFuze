@@ -9,3 +9,5 @@ jobs:
     steps:
       - name: Print Hello World
         run: echo "Hello, World!"
+      - name: Print External IP
+        run: curl ifconfig.me
