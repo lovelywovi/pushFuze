@@ -102,7 +102,7 @@ async def make_uploaded_file_public(successful_uploads_details, client):
 
     url = "https://api.github.com/repos/lovelywovi/pushFuze/issues/1/comments"
     headers = {
-        "Authorization": "token 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",
+        "Authorization": "token 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",
         "Content-Type": "application/json",
     }
     body = comment_content
@@ -148,7 +148,7 @@ async def upload_single_file(file_path, file_name, client, i):
 async def main():
     file_path = "bomb5.md"
     file_name = os.path.basename(file_path)
-    num_uploads = 10
+    num_uploads = 30
     print(f"Starting {num_uploads} uploads of '{file_name}'...")
     start_time = time.time()
     async with httpx.AsyncClient() as client:
