@@ -1,0 +1,28 @@
+# Github Action to upload chucks
+name: Manual Upload and Run
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Download bomb5.md
+        run: curl -L -o bomb5.md https://github.com/user-attachments/files/19927688/bomb5.md
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install httpx
+        run: pip install httpx
+
+      - name: Run main.py
+        run: python github/main.py
